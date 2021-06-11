@@ -13,3 +13,18 @@ ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
 let player = new Player(GAME_WIDTH, GAME_HEIGHT);
 
 player.draw(ctx);
+
+let lastTime = 0;
+
+function gameLoop(timeStamp) {
+    let deltaTime = timeStamp - lastTime;
+    lastTime = timeStamp;
+
+    ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+    player.update(deltaTime);
+    player.draw(ctx);
+
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();

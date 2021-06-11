@@ -16,8 +16,10 @@ export default class Player {
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
     }
 
-    update() {
-
+    update(deltaTime) {
+        if(!deltaTime) return;
+        
+        this.position.x += 5 / deltaTime;
     }
 
 }
