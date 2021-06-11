@@ -21,5 +21,26 @@ export default class InputHandler {
                     break;
             }
         })
+        
+        document.addEventListener('keyup', event => {
+            switch (event.code) {
+                case "KeyA":
+                case "ArrowLeft":
+                    if(player.speedX < 0) player.stopX();
+                    break;
+                case "KeyD":
+                case "ArrowRight":
+                    if(player.speedX > 0) player.stopX();
+                    break;
+                case "KeyW":
+                case "ArrowUp":
+                    if(player.speedY < 0) player.stopY();
+                    break;
+                case "KeyS":
+                case "ArrowDown":
+                    if(player.speedY > 0) player.stopY();
+                    break;
+            }
+        })
     }
 }

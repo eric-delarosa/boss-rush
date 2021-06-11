@@ -30,6 +30,13 @@ export default class Player {
         this.speedY = this.maxSpeed;
     }
 
+    stopX() {
+        this.speedX = 0;
+    }
+    stopY() {
+        this.speedY = 0;
+    }
+
     draw(ctx) {
         ctx.fillStyle = 'blue';
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
