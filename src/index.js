@@ -1,4 +1,4 @@
-import Player from '/player.js';
+import Player from 'src/player.js';
 
 const board_border = 'black';
 const board_background = 'white';
@@ -15,4 +15,3 @@ let player = new Player(GAME_WIDTH, GAME_HEIGHT);
 player.draw(ctx);
 
 
-main();
