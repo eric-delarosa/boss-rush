@@ -1,14 +1,16 @@
 export default class Player {
 
     constructor(gameWidth, gameHeight) {
-        this.gameHeight = gameHeight;
-        this.gameWidth = gameWidth;
-        this.width = 10;
-        this.height = 16;
-        this.maxSpeed = 5;
-        this.speedX = 0;
-        this.speedY = 0;
+        this.gameHeight = gameHeight;  // canvas height
+        this.gameWidth = gameWidth;    // canvas width 
+        this.width = 10;    // player width
+        this.height = 16;   // player height
+        this.maxSpeed = 5;  // maximum player movement speed
+        this.speedX = 0;    // current speed in x direction
+        this.speedY = 0;    // current speed in y direction
 
+        
+        // Player starting position in middle of gamescreen
         this.position = {
             x: gameWidth / 2 - this.width / 2, 
             y: gameHeight / 2 - this.height / 2
